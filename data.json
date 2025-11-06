@@ -1,0 +1,181 @@
+{
+    "java": {
+        "plan": "Here's a 3-day study plan for Java, assuming the student can study for 2 hours per day:\n\n**Day 1 (2 hours): Overview of Java Basics**\n\n1. **Hour 1: Introduction to Java and Setting up the Environment** (45 minutes)\n   - Explain the basics of Java, its features, and applications.\n   - Download and install a Java IDE (e.g., Eclipse, IntelliJ IDEA).\n   - Set up the Java environment and run a 'Hello, World!' program.\n\n2. **Hour 2: Java Syntax and Basic Data Types** (55 minutes)\n   - Introduce Java syntax and basic data types (int, double, char, boolean).\n   - Explain operators, variables, and data type casting.\n\n**Day 2 (2 hours): Control Structures and Object-Oriented Programming**\n\n1. **Hour 1: Control Structures in Java** (45 minutes)\n   - Explain if-else and switch statements.\n   - Introduce loops (for, while, do-while) and their usage.\n   - Discuss the importance of debugging and error handling.\n\n2. **Hour 2: Object-Oriented Programming (OOP) Fundamentals** (55 minutes)\n   - Introduce encapsulation, inheritance, and polymorphism.\n   - Explain the concept of classes and objects in Java.\n   - Create a simple class and object to demonstrate OOP concepts.\n\n**Day 3 (2 hours): Arrays and Collections in Java**\n\n1. **Hour 1: Arrays in Java** (50 minutes)\n   - Explain the concept of arrays, array operations, and array methods.\n   - Discuss multi-dimensional arrays and their applications.\n   - Create a program to demonstrate array operations.\n\n2. **Hour 2: Collections Framework in Java** (50 minutes)\n   - Introduce the java.util package and the collections framework.\n   - Explain the types of collections (List, Set, Map) and their usages.\n   - Discuss the importance of generics in Java collections.\n\nBy following this 3-day study plan, the student will gain a solid foundation in Java basics, control structures, and object-oriented programming, as well as learn about arrays and collections. Remember to take breaks and review the material regularly for better retention.",
+        "quiz": [
+            {
+                "question": "What is the primary purpose of Java's final keyword?",
+                "options": [
+                    "A) To declare a method that must be overridden in a subclass.",
+                    "B) To declare a constant variable.",
+                    "C) To prevent class inheritance.",
+                    "D) To prevent methods from being overridden in a subclass."
+                ],
+                "answer": "D"
+            },
+            {
+                "question": "Which of the following Java keywords is used to implement an interface?",
+                "options": [
+                    "A) Class",
+                    "B) Interface",
+                    "C) Implement",
+                    "D) Extend"
+                ],
+                "answer": "B"
+            },
+            {
+                "question": "What is the purpose of the synchronized keyword in Java?",
+                "options": [
+                    "A) To declare a static variable.",
+                    "B) To declare a constant variable.",
+                    "C) To ensure only one thread can execute a block of code.",
+                    "D) To declare an abstract method."
+                ],
+                "answer": "C"
+            },
+            {
+                "question": "Which Java data structure is used to store and retrieve elements in a specific order?",
+                "options": [
+                    "A) ArrayList",
+                    "B) LinkedList",
+                    "C) HashSet",
+                    "D) PriorityQueue"
+                ],
+                "answer": "B"
+            },
+            {
+                "question": "Which annotation is used in Java to denote a main method for applications?",
+                "options": [
+                    "A) @Override",
+                    "B) @Deprecated",
+                    "C) @FunctionalInterface",
+                    "D) @main"
+                ],
+                "answer": "A"
+            }
+        ]
+    },
+    "calculus": {
+        "plan": "Here's a 5-day study plan for calculus, focusing on 2 hours of study per day.\n\n**Day 1: Limits and Basic Concepts (2 hours)**\n\n- **Topic 1: Introduction to Limits** (15 minutes)\n  - Review basic definitions and notations of limits.\n  - Learn about one-sided limits, direct substitution, and the squeeze theorem.\n\n- **Topic 2: Calculus Basics** (30 minutes)\n  - Review the fundamental theorem of calculus (FTC) and its components (parts A & B).\n  - Learn about left and right limits, fundamental limits, and basic rules (product, quotient, and power rules).\n\n- **Topic 3: Examples and Practice** (45 minutes)\n  - Practice solving examples of limit-related problems in calculus.\n  - Use online resources or textbooks to strengthen basic limit concepts.\n\n- **Topic 4: Review and Practice** (30 minutes)\n  - Review the study material from the day, focusing on identifying the main points.\n  - Practice solving sample questions from a past exam or textbook to apply concepts.\n\n**Day 2: Differentiation (2 hours)**\n\n- **Topic 1: Rules of Differentiation** (30 minutes)\n  - Learn the power rule, product rule, and quotient rule in calculus.\n  - Understand the chain rule and apply it to solve problems.\n\n- **Topic 2: Differentiation Basics** (30 minutes)\n  - Learn the concept of differentiation as a limit.\n  - Review the basic differentiation rules and combine multiple rules to solve derivatives.\n\n- **Topic 3: Geometric Interpretation** (30 minutes)\n  - Learn the rate of change and slope of tangent lines in calculus.\n  - Apply differentiation to solve problems related to geometric applications.\n\n- **Topic 4: Review and Practice** (30 minutes)\n  - Review differentiation concepts and apply the rules by practicing sample questions.\n\n**Day 3: Differentiation and Optimization (2 hours)**\n\n- **Topic 1: Higher-Order Derivatives** (30 minutes)\n  - Review the concept of higher-order derivatives in calculus.\n  - Apply the concepts of higher-order derivatives to solve optimization problems.\n\n- **Topic 2: Optimization with the Chain Rule** (45 minutes)\n  - Learn how to apply the chain rule to solve more complex optimization problems.\n  - Practice solving examples and practice questions.\n\n- **Topic 3: Real-World Applications** (30 minutes)\n  - Study real-world applications of calculus such as physics, engineering, and economics.\n  - Connect calculus concepts to everyday life to understand their practical significance.\n\n- **Topic 4: Conceptual Check** (15 minutes)\n  - Use a conceptual checkup to ensure you fully understand the different topics covered so far.\n\n**Day 4: Integration (2 hours)**\n\n- **Topic 1: Indefinite Integrals** (45 minutes)\n  - Learn about basic indefinite integrals such as power rule, exponential functions, and trigonometric functions.\n  - Understand and apply integration as the reverse process of differentiation.\n\n- **Topic 2: Area Under Curves** (30 minutes)\n  - Study how definite integrals represent the area under curves.\n  - Review the fundamental theorem of calculus and its application in integration.\n\n- **Topic 3: Integration Formulas** (30 minutes)\n  - Review the key integration formulas and techniques, including u-substitution and integration by parts.\n  - Apply these formulas to solve problems and identify common mistakes.\n\n- **Topic 4: Review and Practice** (15 minutes)\n  - Review the day's material, especially emphasizing common problems and areas for improvement.\n\n**Day 5: Integration and Review (2 hours)**\n\n- **Topic 1: Advanced Integrals** (45 minutes)\n  - Study advanced integration techniques, including integration by partial fractions and trigonometric identities.\n  - Practice solving challenging problems related to integrals.\n\n- **Topic 2: Integration Applications** (45 minutes)\n  - Apply calculus concepts to solve applications problems in economics, physics, and engineering.\n  - Understand how calculus is used in the workplace and everyday life.\n\n- **Topic 3: Conceptual and Mental Review** (30 minutes)\n  - Review all the topics covered and focus on conceptual understanding and application to diverse problems.\n\n- **Topic 4: Final Checkup and Confidence Boost** (0 minutes/30 minutes optional - review all topics and questions and feel confident in areas you need further help)\n  - Use this time to fill knowledge gaps and feel confident about the subject.\n  - Make a final review and plan any remaining study sessions as needed.",
+        "history": [
+            {
+                "date": "2025-11-04 11:35",
+                "score": 3,
+                "total": 5
+            }
+        ],
+        "quiz": [
+            {
+                "question": "What is the primary branch of calculus concerned with studying continuous change?",
+                "options": [
+                    "A) Differential Calculus",
+                    "B) Integral Calculus",
+                    "C) Analytic Geometry",
+                    "D) Vector Calculus"
+                ],
+                "answer": "A"
+            },
+            {
+                "question": "What is the formula for the derivative of the sine function?",
+                "options": [
+                    "A) dx/dy = sin(y)",
+                    "B) dx/dy = cos(y)",
+                    "C) dx/dy = -cos(y)",
+                    "D) dx/dy = sin(a*y)"
+                ],
+                "answer": "C"
+            },
+            {
+                "question": "What is the process of summing the areas of an infinite number of rectangles to approximate the area under a curve called?",
+                "options": [
+                    "A) Riemann Sums",
+                    "B) Rectangular Rule",
+                    "C) Trapezoidal Rule",
+                    "D) Simpson's Rule"
+                ],
+                "answer": "A"
+            },
+            {
+                "question": "What is the fundamental theorem of calculus that states the derivative of an antiderivative of a function is the function itself?",
+                "options": [
+                    "A) FT1",
+                    "B) Fundamental Theorem of Calculus 1",
+                    "C) Fundamental Theorem of Calculus 2",
+                    "D) FT2"
+                ],
+                "answer": "B"
+            },
+            {
+                "question": "What is the term for the slope of the tangent line to a curve at a given point?",
+                "options": [
+                    "A) Instantaneous Rate of Change",
+                    "B) Average Speed",
+                    "C) Tangent Slope",
+                    "D) Secant Line Slope"
+                ],
+                "answer": "A"
+            }
+        ]
+    },
+    "trigonometry": {
+        "plan": "Here's a 3-day study plan for trigonometry, with 2 hours of study time per day:\n\n**Day 1: Basic Trigonometric Concepts and Identities (2 hours)**\n\n- **Hour 1: Basic Trigonometry (30 minutes) + Introduction to Trigonometric Identities (30 minutes)**\n  - Review the basic trigonometric functions: sine (sin), cosine (cos), and tangent (tan).\n  - Understand their relationships and periodic nature.\n  - Use the unit circle to visualize and understand the relationships.\n- **Hour 2: Trigonometric Identities (60 minutes)**\n  - Introduce the Pythagorean identity: sin^2(x) + cos^2(x) = 1\n  - Cover the reciprocal identities: 1/sin(x) = cosec(x), 1/cos(x) = sec(x), and 1/tan(x) = cot(x)\n  - Learn the quotient identities: tan(x) = sin(x)/cos(x) and cot(x) = cos(x)/sin(x)\n\n**Day 2: Graphs of Trigonometric Functions and Inverse Functions (2 hours)**\n\n- **Hour 1: Graphs of Basic Trigonometric Functions (45 minutes) + Graphing (15 minutes)**\n  - Review the graphs of sine, cosine, and tangent functions.\n  - Understand the key features of the graphs: period, amplitude, midline, and asymptotes.\n  - Learn how to graph the function using the unit circle.\n- **Hour 2: Graphs of Trigonometric Functions with Horizontal Shifts and Stretches/Compressions (45 minutes) + Inverse Trigonometric Functions (15 minutes)**\n  - Apply horizontal shifts, stretches, and compressions to the graphs of basic trigonometric functions.\n  - Introduce the concept of the inverse trigonometric functions: arcsin, arccos, and arctan.\n\n**Day 3: Angles and Triangles (2 hours)**\n\n- **Hour 1: Angles and Angle Types (45 minutes) + Basic Triangle Properties (15 minutes)**\n  - Understand the definitions of different angle types: acute, obtuse, right, and straight angles.\n  - Review the properties of congruent and similar triangles.\n- **Hour 2: Solving Triangles Using Trigonometry (45 minutes) + Applications (15 minutes)**\n  - Learn how to solve triangles using the law of sines and law of cosines.\n  - Understand how to apply trigonometry to solve real-world problems: physics, geography, and engineering.\n\nRemember to:\n\n- Review and practice problems from previous lessons\n- Use visual aids and formulas to reinforce understanding\n- Apply concepts to new problems and exercises\n- Get enough rest and stay hydrated throughout your study sessions",
+        "history": [
+            {
+                "date": "2025-11-04 11:49",
+                "score": 3,
+                "total": 5
+            }
+        ],
+        "quiz": [
+            {
+                "question": "In a right-angled triangle, which of the following is NOT a basic trigonometric ratio?",
+                "options": [
+                    "A) Sine",
+                    "B) Cosine",
+                    "C) Tangent",
+                    "D) Square"
+                ],
+                "answer": "D"
+            },
+            {
+                "question": "What is the value of sin(30 degrees)?",
+                "options": [
+                    "A) 0.5",
+                    "B) 0.75",
+                    "C) 1",
+                    "D) \u03c0/6"
+                ],
+                "answer": "A"
+            },
+            {
+                "question": "In a right-angled triangle, what is the ratio of the adjacent side to the hypotenuse called?",
+                "options": [
+                    "A) Sine",
+                    "B) Cosine",
+                    "C) Tangent",
+                    "D) Cotangent"
+                ],
+                "answer": "B"
+            },
+            {
+                "question": "What is the value of cos(60 degrees)?",
+                "options": [
+                    "A) 0.5",
+                    "B) 0.75",
+                    "C) 0.866",
+                    "D) 1"
+                ],
+                "answer": "C"
+            },
+            {
+                "question": "What is the tangent of 45 degrees?",
+                "options": [
+                    "A) 1",
+                    "B) 0.7071",
+                    "C) 1.414",
+                    "D) \u221a2"
+                ],
+                "answer": "B"
+            }
+        ]
+    }
+}
