@@ -3,12 +3,22 @@ import re
 from groq import Groq
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
+# Load local .env file if it exists
 load_dotenv()
 
 class QuizAgent:
     def __init__(self):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        # Try Streamlit secrets first, fallback to .env
+        api_key = (
+            st.secrets.get("GROQ_API_KEY")
+            if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets
+            else os.getenv("GROQ_API_KEY")
+        )
+        if not api_key:
+            raise ValueError("GROQ_API_KEY not found in Streamlit secrets or .env file.")
+        self.client = Groq(api_key=api_key)
 
     def generate_quiz(self, topic, num_questions=5):
         prompt = f"""Generate exactly {num_questions} multiple choice questions about {topic}.
@@ -39,97 +49,39 @@ Requirements:
                 max_tokens=2000
             )
 
-            # Get raw text from model
             text = response.choices[0].message.content.strip()
-            print("=" * 50)
-            print("RAW RESPONSE:")
-            print(text)
-            print("=" * 50)
-            
-            # Clean the response
             text = self._clean_json_response(text)
-            
-            # Parse JSON
             quiz_data = json.loads(text)
-            
-            # Validate structure
-            if not isinstance(quiz_data, list):
-                print("Error: Response is not a list")
+
+            if not isinstance(quiz_data, list) or len(quiz_data) == 0:
+                print("Error: Empty or invalid quiz response.")
                 return None
-                
-            if len(quiz_data) == 0:
-                print("Error: Empty quiz list")
-                return None
-            
-            # Validate each question
-            valid_questions = []
-            for i, q in enumerate(quiz_data):
-                if self._validate_question(q, i):
-                    valid_questions.append(q)
-            
-            if len(valid_questions) == 0:
-                print("Error: No valid questions found")
-                return None
-                
-            print(f"Successfully parsed {len(valid_questions)} questions")
-            return valid_questions
-            
+
+            valid_questions = [q for i, q in enumerate(quiz_data) if self._validate_question(q, i)]
+            return valid_questions if valid_questions else None
+
         except json.JSONDecodeError as e:
             print(f"JSON parsing error: {e}")
-            print(f"Cleaned text: {text[:500]}")
             return None
         except Exception as e:
             print(f"Error generating quiz: {e}")
             return None
-    
+
     def _clean_json_response(self, text):
-        """Clean the response to extract valid JSON"""
-        # Remove markdown code blocks
         text = re.sub(r'```json\s*', '', text)
         text = re.sub(r'```\s*', '', text)
-        
-        # Find JSON array
         match = re.search(r'\[.*\]', text, re.DOTALL)
         if match:
             text = match.group(0)
-        
-        # Remove any text before [ or after ]
-        start = text.find('[')
-        end = text.rfind(']')
-        if start != -1 and end != -1:
-            text = text[start:end+1]
-        
         return text.strip()
-    
+
     def _validate_question(self, q, index):
-        """Validate a single question structure"""
         if not isinstance(q, dict):
-            print(f"Q{index}: Not a dictionary")
             return False
-        
-        required_keys = ['question', 'options', 'answer']
-        for key in required_keys:
-            if key not in q:
-                print(f"Q{index}: Missing key '{key}'")
-                return False
-        
-        if not isinstance(q['options'], list):
-            print(f"Q{index}: Options is not a list")
+        if not all(k in q for k in ['question', 'options', 'answer']):
             return False
-        
-        if len(q['options']) < 2:
-            print(f"Q{index}: Not enough options")
+        if not isinstance(q['options'], list) or len(q['options']) != 4:
             return False
-        
         if q['answer'] not in q['options']:
-            print(f"Q{index}: Answer '{q['answer']}' not in options")
-            # Try to fix it
-            if isinstance(q['answer'], str):
-                for opt in q['options']:
-                    if q['answer'].lower() in opt.lower() or opt.lower() in q['answer'].lower():
-                        q['answer'] = opt
-                        print(f"Q{index}: Fixed answer to '{opt}'")
-                        return True
             return False
-        
         return True

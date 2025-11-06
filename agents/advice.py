@@ -1,12 +1,22 @@
 from groq import Groq
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
+# Load local .env if running locally
 load_dotenv()
 
 class AdviceAgent:
     def __init__(self):
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        # Try Streamlit secrets first, fallback to .env
+        api_key = (
+            st.secrets.get("GROQ_API_KEY")
+            if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets
+            else os.getenv("GROQ_API_KEY")
+        )
+        if not api_key:
+            raise ValueError("GROQ_API_KEY not found in Streamlit secrets or .env file.")
+        self.client = Groq(api_key=api_key)
 
     def give_advice(self, topic, score, total, plan_summary=None):
         """Generate personalized learning advice"""
